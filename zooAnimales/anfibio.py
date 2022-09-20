@@ -1,4 +1,4 @@
-import animal
+from zooAnimales.animal import Animal
 
 class Anfibio(Animal):
     _listado = []
@@ -10,45 +10,45 @@ class Anfibio(Animal):
         self._colorPiel = colorPiel
         self._venenoso = venenoso
 
-    @staticmethod
+    @classmethod
     def cantidadAnfibios(cls):
         return len(cls._listado)
 
-    @staticmethod
+    @classmethod
     def crearRana(cls, nombre, edad, genero):
         rana = Anfibio(nombre, edad, "humedal", genero, "rojo", True)
         cls._listado.append(rana)
         cls.ranas += 1
         return rana
 
-    @staticmethod
+    @classmethod
     def crearSalamandra(cls, nombre, edad, genero):
         salamandra = Anfibio(nombre, edad, "jungla", genero, "negro y amarillo", False)
         cls._listado.append(salamandra)
         cls.salamandras += 1
         return salamandra
 
-    @staticmethod
+    @classmethod
     def getListado(cls):
         return cls._listado
 
-    @staticmethod
+    @classmethod
     def setListado(cls, listado):
         cls._listado = listado
 
-    @staticmethod
+    @classmethod
     def getRanas(cls):
         return cls.ranas
 
-    @staticmethod
+    @classmethod
     def setRanas(cls, ranas):
         cls.ranas = ranas
 
-    @staticmethod
+    @classmethod
     def getSalamandras(cls):
         return cls.salamandras
 
-    @staticmethod
+    @classmethod
     def setSalamandras(cls, salamandras):
         cls.salamandras = salamandras
 
