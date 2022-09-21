@@ -6,7 +6,7 @@ class Anfibio(Animal):
     salamandras = 0
 
     def __init__(self, nombre, edad, habitat, genero, colorPiel, venenoso):
-        super().__init__(self, nombre, edad, habitat, genero)
+        super().__init__(nombre, edad, habitat, genero)
         self._colorPiel = colorPiel
         self._venenoso = venenoso
 
@@ -51,36 +51,6 @@ class Anfibio(Animal):
     @classmethod
     def setSalamandras(cls, salamandras):
         cls.salamandras = salamandras
-
-    def getNombre(self):
-        return self._nombre
-
-    def setNombre(self, nombre):
-        self._nombre = nombre
-
-    def getEdad(self):
-        return self._edad
-
-    def setEdad(self, edad):
-        self._edad = edad
-
-    def getHabitat(self):
-        return self._habitat
-
-    def setHabitat(self, habitat):
-        self._habitat = habitat
-
-    def getGenero(self):
-        return self._genero
-
-    def setGenero(self, genero):
-        self._genero = genero
-
-    def getZona(self):
-        return self._zona
-
-    def setZona(self, zona):
-        self._zona = zona
 
     def getColorPiel(self):
         return self._colorPiel
